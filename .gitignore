@@ -1,0 +1,14 @@
+﻿bower_components/
+public/lib/
+backpop/node_modules/
+node_modules/
+*.css
+public/apidoc/
+apidoc/
+js/
+public/prod/
+~$Maquetación.pptx
+public/images/profile-images
+public/images/ads-images
+estructura.txt
+uploads/

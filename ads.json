@@ -1,0 +1,82 @@
+{
+    "ads": [
+    {
+        "title": "PlayStation 4",
+        "image":"../images/ads-images/play.jpg",
+        "creationDate": "2016-04-25",
+        "detail": "PlayStation 4 seminueva, con caja, mandos y 2 juegos",
+        "owner": "Jose",
+        "price": "390",
+        "badge": "eur",
+        "category": "CAT5",
+        "tags": ["consolas","playStation","videojuegos"],
+        "exchanges": false,
+        "negotiable": false,
+        "shipments": true,
+        "sold": false,
+        "visits": 0,
+        "likes": 0,
+
+        "purchaser":"",
+        "ownerId": ""
+    }, 
+    {
+
+        "title": "Iphone 4",
+        "image":"../images/ads-images/iphone.jpg",
+        "detail": "Iphone 4 seminuevo, con caja y cargador ",
+        "creationDate": "2016-04-25",
+        "owner":"Hector",
+        "price":"360",
+        "badge": "usd",
+        "category": "CAT1",
+        "tags": ["iphone4","móvil","electrónica"],
+        "exchanges": true,
+        "negotiable": false,
+        "shipments": true,
+        "sold": false,
+        "visits": 0,
+        "likes": 0,
+        "purchaser":"",
+        "ownerId": ""
+    },
+    {
+        "title": "HP Pavilion DV6",
+        "image":"../images/ads-images/hp.jpg",
+        "creationDate": "2016-04-25",
+        "detail": "Ordenador HP Pavilion Dv6, con 8GB de RAM,ratón y cargador y maletín",
+        "owner": "Lautaro",
+        "price": "700",
+        "badge": "eur",
+        "category": "CAT1",
+        "tags": ["ordenador","portátil","HP"],
+        "exchanges": false,
+        "negotiable": false,
+        "shipments": true,
+        "sold": false,
+        "visits": 0,
+        "likes": 0,
+        "purchaser":"",
+        "ownerId": ""
+    },
+    {
+        "title": "MacBook Pro",
+        "image":"../images/ads-images/mac.jpg",
+        "creationDate": "2016-04-25",
+        "detail": "MacBookPro garantía 2 años, nuevecito",
+        "owner": "Rocío",
+        "price": "1500",
+        "badge": "eur",
+        "category": "CAT1",
+        "tags": ["Apple","MacBook","ordenador"],
+        "exchanges": false,
+        "negotiable": false,
+        "shipments": true,
+        "sold": false,
+        "visits": 0,
+        "likes": 0,
+        "purchaser":"",
+        "ownerId": ""
+    }
+]
+}

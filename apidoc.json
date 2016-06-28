@@ -1,0 +1,23 @@
+{
+    "name": "BabelPop",
+    "version": "0.1.0",
+    "description": "App developed with the MEANJS stack",
+    "title": "BabelPop's API documentation",
+    "url": "http://localhost:3000/",
+    "sampleUrl": "http://localhost:3000/",
+    "order": [
+        "PostUser",
+        "GetUsers",
+        "GetUser",
+        "SignUp",
+        "PutUser",
+        "PostAd",
+        "GetAds",
+        "GetAd"
+    ],
+    "template": {
+        "forceLanguage": "en",
+        "withCompare": false,
+        "withGenerator": false
+    }
+}

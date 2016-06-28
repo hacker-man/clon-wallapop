@@ -1,0 +1,42 @@
+.logo-heading {
+    font-family: @logo-font-family;
+    font-size: @logo-heading-font-size;
+    text-shadow: @black-color 3px 3px 8px;
+    .logo-color-babel {
+        color: @white-color;
+        &:hover {
+            text-shadow: 3px 3px 8px @black-color, 1px 1px 30px @white-color;
+        }
+    }
+    .logo-color-pop {
+        color: @babelpop-blue;
+        &:hover {
+            text-shadow: 3px 3px 8px @black-color, 1px 1px 30px @white-color;
+        }
+    }
+}
+
+.logo-navbar {
+    font-family: @logo-font-family;
+    font-size: @logo-navbar-font-size;
+    .logo-color-babel {
+        color: @white-color;
+        &:hover {
+            text-shadow: 1px 1px 30px @babelpop-blue;
+        }
+    }
+    .logo-color-pop {
+        color: @babelpop-blue;
+        &:hover {
+            text-shadow: 1px 1px 30px @white-color;
+        }
+    }
+    &:hover {
+        :nth-child(1) {
+            color: @whiteish-color;
+        }
+        :nth-child(2) {
+            color: @babelpop-darker-blue;
+        }
+    }
+}

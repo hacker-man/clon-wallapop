@@ -1,0 +1,66 @@
+{
+    "users": [
+        {
+            "name": "Rocio Romero Panero",
+            "rol": "user",
+            "email": "rocio.romero@babel.es",
+            "pass": "123456",
+            "photo": "D:/Users/rocio.romero.BABEL-SI/Desktop/BabelPop/backpop/photo.jpg",
+            "photoSocial": "",
+            "date": "2016-04-26",
+            "birthDate": "2016-04-25",
+            "livingArea": "Madrid",
+            "gender": "Female",
+            "phone": "123456789",
+            "favCat": [],
+            "photoSocial": "",
+            "facebook": ""
+        },
+        {
+            "name": "Lautaro Germán Zúñiga",
+            "rol": "admin",
+            "email": "lautaro.zuniga@babel.es",
+            "pass": "123456789",
+            "photo": "D:/Users/rocio.romero.BABEL-SI/Desktop/BabelPop/backpop/photo.jpg",
+            "photoSocial": "",
+            "date": "2016-04-26",
+            "birthDate": "2016-04-25",
+            "livingArea": "Madrid",
+            "gender": "Male",
+            "phone": "123456789",
+            "favCat": [],
+            "facebook": ""
+        },
+        {
+            "name": "Jose Luis Romero Lluch",
+            "rol": "user",
+            "email": "joseluis.romero@babel.es",
+            "pass": "123456",
+            "photo": "D:/Users/rocio.romero.BABEL-SI/Desktop/BabelPop/backpop/photo.jpg",
+            "photoSocial": "",
+            "date": "2016-04-26",
+            "birthDate": "2016-04-25",
+            "livingArea": "Madrid",
+            "gender": "Male",
+            "phone": "123456789",
+            "favCat": [],
+            "facebook": ""
+        },
+        {
+            "name": "Hector Moreno Cervera",
+            "rol": "user",
+            "email": "hector.moreno@babel.es",
+            "pass": "123456",
+            "photo": "D:/Users/rocio.romero.BABEL-SI/Desktop/BabelPop/backpop/photo.jpg",
+            "photoSocial": "",
+            "date": "2016-04-26",
+            "birthDate": "2016-04-25",
+            "livingArea": "Madrid",
+            "gender": "Male",
+            "phone": "123456789",
+            "favCat": [],
+            "facebook": ""
+        }
+
+    ]
+}

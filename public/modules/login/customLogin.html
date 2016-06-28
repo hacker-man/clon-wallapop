@@ -1,0 +1,33 @@
+<div ng-controller="customLoginCtrl">
+    <form ng-submit ="login()" name="loginForm" class="form-horizontal" novalidate ng-submit="loginForm.$valid && loginForm.password.$modelValue.length > 8">
+        <div class="form-group" ng-class="{ 'has-success': loginForm.email.$valid && loginForm.email.$dirty, 'has-error': loginForm.email.$invalid && loginForm.email.$dirty }">
+            <div class="col-xs-10 col-sm-11">
+                <input type="email" class="form-control" name="email" placeholder="*{{ 'CUSTOMLOGIN.EMAIL' | translate }}" ng-model="model.email" required autofocus>
+            </div>
+            <div class="col-xs-2 col-sm-1">
+                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': loginForm.email.$valid && loginForm.email.$dirty, 'glyphicon-remove red_class': loginForm.email.$invalid && loginForm.email.$dirty, 'glyphicon-pencil': loginForm.email.$pristine }"></span>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-success': loginForm.password.$valid && loginForm.password.$dirty, 'has-error': loginForm.password.$invalid && loginForm.password.$dirty || loginForm.password.$modelValue.length < 8 }">
+            <div class="col-xs-10 col-sm-11">
+                <input type="password" class="form-control" name="password" placeholder="*{{ 'CUSTOMLOGIN.PASS' | translate }}" ng-model="model.password" required>
+            </div>
+            <div class="col-xs-2 col-sm-1">
+                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': loginForm.password.$valid && loginForm.password.$dirty && loginForm.password.$modelValue.length >= 8, 'glyphicon-remove red_class': (loginForm.password.$invalid && loginForm.password.$dirty) || loginForm.password.$modelValue.length < 8, 'glyphicon-pencil': loginForm.password.$pristine}"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="font-grey" translate="FORM.STARFIELD"></div>
+                <button type="submit" id="entrarBtn" class="btn btn-lg btn-default" ng-disabled="loginForm.$invalid || loginForm.password.$modelValue.length < 8" ng-click="login()" style="margin-top: 15px"><span class="fa fa-user"></span> <span translate="CUSTOMLOGIN.JOIN"></span></button>
+            </div>
+            <div class="col-xs-12 col-sm-4 text-center">
+                <a href="" ng-click="goToRecover()" translate="CUSTOMLOGIN.FORGOTTEN"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4 text-center">
+                <a href="" ng-click="redirectSignup()" translate="CUSTOMLOGIN.SIGNUPQUESTION"></a>
+            </div>
+        </div>
+        <div ng-if="logError === 401" id="errMsg" class="text-red text-center" style="font-size: 1.3em" translate="CUSTOMLOGIN.WRONG"></div>
+    </form>
+    </div>

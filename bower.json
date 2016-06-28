@@ -1,0 +1,39 @@
+{
+  "name": "BabelPopTeam",
+  "authors": [
+    "Héctor Moreno Cervera <hector.moreno@babel.es>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "satellizer": "^0.14.0",
+    "font-awesome": "^4.6.1",
+    "animate.css": "^3.5.1",
+    "angular-spinner": "^0.8.1",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "ng-file-upload": "^12.0.4",
+    "checklist-model": "^0.9.0",
+    "angular-bootstrap-switch": "^0.5.0",
+    "ngmap": "^1.17.3",
+    "ng-maps": "ng-map#*",
+    "bootstrap-switch": "^3.3.2",
+    "ng-img-crop": "ngImgCrop#^0.3.2",
+    "angular-socket-io": "^0.7.0",
+    "angular-scroll-glue": "^2.0.7"
+  }
+}

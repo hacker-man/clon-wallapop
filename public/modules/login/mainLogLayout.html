@@ -1,0 +1,19 @@
+<div ng-controller="mainLogLayoutCtrl">
+    <div class="text-center">
+        <div class="logo-heading" style="padding-bottom: 50px">
+            <span class="logo-color-babel">Babel</span><span class="logo-color-pop">pop</span>
+        </div>
+        <div ui-view></div>
+        <div style="padding-top: 20px">
+            <button class="btn btn-social btn-facebook" id="loginFB" ng-click="authenticate('facebook')" style="margin-top: 10px">
+                <span class="fa fa-facebook"></span> <div translate="MAINLOGLAYOUT.FACEBOOK"></div>
+            </button>
+            <button class="btn btn-social btn-google" id="loginGoo" ng-click="authenticate('google')" style="margin-top: 10px">
+                 <span class="fa fa-google"></span> <div translate="MAINLOGLAYOUT.GOOGLE"></div>
+            </button>
+            <h3 style="padding-top: 200px"  translate="MAINLOGLAYOUT.CONTINUE"></h3>
+            <button class="btn btn-lg btn-outline outline-right" id="loginBabel" ng-click="login()"  translate="MAINLOGLAYOUT.JOIN"></button>
+            <button class="btn btn-lg btn-outline outline-left" id="regBabel" ng-click="signup()"  translate="MAINLOGLAYOUT.SIGNUP"></button>
+        </div>
+    </div>
+</div>

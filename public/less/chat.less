@@ -1,0 +1,186 @@
+.chatTab {
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    position: fixed;
+    background: @babelpop-blue-transparency;
+    font-weight: bold;
+}
+
+.chatWindow {
+    z-index: 2;
+    bottom: 47px;
+    right: 0;
+    height: 400px;
+    position: fixed;
+    background: beige;
+    border: solid 2px #3573de;
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.newChatsAvailable {
+    position: static;
+    display: inline-block;
+    background-color: aqua;
+}
+
+.chatPicture {
+    height: 50px;
+    border-radius: 50%;
+    border: @babelpop-blue 1px solid;
+}
+
+.chatPanel {
+    background: @pattern-background-image;
+    border-bottom: @light-blue-color 1px solid;
+}
+
+.chatMessage {
+    margin-bottom: 10px;
+}
+
+.chatSendButton {
+    font-size: 20px;
+    display: inline;
+    height: 25px;
+    left: 78%;
+    position: absolute;
+}
+
+.chatSendIcon {
+    position: relative;
+    top: -15px;
+    left: -10px;
+}
+
+.statusBall {
+    border: solid 1px @darklight-blue-color;
+    top: 2px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: inset -2px -2px 14px rgba(0, 0, 0, 0.5);
+    background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    background-image: -o-linear-gradient(-45deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    &.off {
+        background-color: grey;
+        left: -10px;
+        top: -5px;
+        display: block;
+    }
+    &.on {
+        background-color: green;
+        left: -10px;
+        top: -5px;
+        display: block;
+    }
+}
+
+
+/* CSS talk bubble */
+
+.talk-bubble {
+    margin: 5px;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+    width: 74%;
+    height: auto;
+    &.asker {
+        background: lightgreen;
+    }
+    &.target {
+        background: lightblue;
+    }
+}
+
+.round {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.pull_right {
+    float: right;
+}
+
+
+/* Right triangle placed top left flush. */
+
+.tri-right.border.left_top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #666 transparent transparent transparent;
+}
+
+.tri-right.left_top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: lightgreen transparent transparent transparent;
+}
+
+
+/* Right triangle placed top right flush. */
+
+.tri-right.border.right_top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -40px;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #666 transparent transparent transparent;
+}
+
+.tri-right.right_top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -15px;
+    top: 0px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: lightblue transparent transparent transparent;
+}
+
+
+/* talk bubble contents */
+
+.talktext {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+    word-wrap: break-word;
+}
+
+.talktext p {
+    /* remove webkit p margins */
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}

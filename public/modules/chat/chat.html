@@ -1,0 +1,55 @@
+<div ng-controller="chatCtrl">
+    <div class="btn btn-large btn-outline outline-border chatTab" data-toggle="collapse" data-target="#collapseChat" ng-click="newChats = false">
+        <span ng-if="newChats">
+        <span class="statusBall newChatsAvailable animated bounce"><span class="fa fa-exclamation"></span></span>
+        </span>
+        <span ng-show="newMessages > 0" class="badge animated bounce">{{newMessages}}</span>
+        <span>
+            Chats
+        </span>
+    </div>
+    <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 chatWindow collapse" id="collapseChat" scroll-glue=true>
+        <div ng-show="rooms.length < 1">
+            <div style="font-size: 26px; margin-top: 50%">
+                {{ "CHAT.NOCHATS" | translate }}
+            </div>
+            <div>
+                {{ "CHAT.WHATTODO1" | translate }}
+            </div>
+            <div>
+                {{ "CHAT.WHATTODO2" | translate }}
+            </div>
+        </div>
+        <div ng-show="showUsers" ng-repeat="item in rooms">
+            <div class="btn btn-outline outline-border col-xs-12" ng-click="openChat($index)">
+                <div class="pull-left">
+                    <img ng-src="{{ item.photoSocial }}" class="chatPicture" alt="">
+                    <span ng-show="item.newMessages > 0" class="badge animated bounce">{{item.newMessages}}</span>
+                </div>
+                <div class="statusBall" ng-class="{ off: item.connected !== true, on: item.connected === true}"></div>
+                <div class="pull-right">
+                    {{ item.name }}
+                </div>
+            </div>
+        </div>
+        <div ng-show="!showUsers" style="height: 70%; width: 100%">
+            <div class="btn-group" style="width: 100%">
+                <div class="btn btn-outline outline-border" style="height: 60px; width: 20%; padding: 5px" ng-click="closeChat()">
+                    <span class="fa fa-arrow-left" style="margin-top: 15px"></span>
+                </div>
+                <a href="" ui-sref="detailUser({_id: room._id})">
+                    <div class="btn btn-outline outline-border" style="height: 60px; width: 80%; padding: 5px 15px 5px 15px">
+                        <div class="pull-left">
+                            <img src="{{ room.photoSocial }}" class="chatPicture" alt="">
+                        </div>
+                        <div class="statusBall" ng-class="{ off: room.connected !== true, on: room.connected === true}"></div>
+                        <span class="pull-right" style="color: black">
+                        {{ room.name }}
+                    </span>
+                    </div>
+                </a>
+            </div>
+            <div ng-include="'modules/chat/chatWindow.html'" style="height: 100%"></div>
+        </div>
+    </div>
+</div>

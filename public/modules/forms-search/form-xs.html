@@ -1,0 +1,95 @@
+ <div class="visible-xs visible-sm visible-md">
+        <form name="searchForm" class="form-horizontal" ng-submit="goSearch(area,orden)" novalidate>
+           <div class="row" style="min-height: 40px">
+                <div class="col-xs-12 text-center">
+                <fieldset>
+                    <legend align="left">{{"SORTBY" | translate}}</legend>
+                    <div class="funkyradio">
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="orden" value="location" name="radio" id="radio1" />
+                            <label style="padding-right: 10px" for="radio1">{{ "PROX" | translate}}</label>
+                        </div>
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="orden" value="-price" name="radio" id="radio2" />
+                            <label style="padding-right: 10px" for="radio2">{{ "CTOE" | translate}}</label>
+                        </div>
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="orden" value="price" name="radio" id="radio3" />
+                            <label style="padding-right: 10px" for="radio3">{{ "ETOC" | translate}}</label>
+                        </div>
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="orden" name="radio" value="creationDate" id="radio4" />
+                            <label style="padding-right: 10px" for="radio4">{{ "LAST" | translate}}</label>
+                        </div>
+                    </div>
+                    </fieldset>
+                </div>
+           </div>
+           <div class="row text-center" style="min-height: 40px">
+                <div class="col-xs-12">
+                <fieldset>
+                    <legend align="left">{{"CATTITLE" | translate}}</legend>
+                    <div ng-repeat="cat in categories">
+                        <div class="funkyradio">
+                            <div class="funkyradio-success">
+                                <input type="checkbox" id="{{cat}}" checklist-model="favCat" checklist-value="cat" />
+                                <label for={{cat}} translate="{{cat}}"></label>
+                            </div>
+                        </div>
+                    </div>
+                    </fieldset>
+                </div>
+           </div>
+           <div class="row text-center">
+               <div class="col-xs-12">
+               <fieldset>
+                    <legend align="left">{{"PROXIMITY" | translate}}</legend>
+                   <div class="funkyradio">
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="area" name="area" value="1" id="radio5" />
+                            <label for="radio5">{{"CLOSER" | translate}}</label>
+                        </div>
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="area" name="area" value="5" id="radio6" />
+                            <label for="radio6">{{"ZONE" | translate}}</label>
+                        </div>
+                        <div class="funkyradio-info">
+                            <input type="radio" ng-model="area" name="area" value="10" id="radio7" />
+                            <label for="radio7">{{"CITY" | translate}}</label>
+                        </div>
+                    </div>
+                    </fieldset>
+               </div>
+           </div>
+           <div class="row" style="min-height: 40px">
+                    <div class="col-xs-9 col-xs-offset-3">
+                      <fieldset>
+                            <legend align="left">{{"PRICETITLE" | translate}}</legend>
+                        <div class="form-group">
+                            <div class="col-xs-5">
+                                <input type="number" placeholder="Min" name="preciomin" ng-model="model.min" class="form-control" min="0">
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="number" placeholder="Max" name="preciomax" ng-model="model.max" class="form-control" min="{{model.min}}">
+                            </div>
+                        </div>
+                        </fieldset>
+                    </div>
+           </div>
+           <div class="row" style="min-height: 40px">
+                        <div class="col-xs-12">
+                            <div class="text-danger" ng-show="searchForm.preciomin.$dirty && (searchForm.preciomin.$error.number || searchForm.preciomin.$error.min)">
+                                {{"WARNINGMIN" | translate}}
+                            </div>
+                            <div class="text-danger" ng-show="searchForm.preciomax.$dirty && (searchForm.preciomax.$error.number || searchForm.preciomax.$error.min)">
+                                {{"WARNINGMIN2" | translate}}
+                            </div>
+                      </div>
+           </div>
+           <div class="row">
+                <div class="col-xs-12 text-center">
+                    <button type="submit" ng-disabled="searchForm.$invalid" class="btn btn-primary btn-lg" style="color: white; background-color:#153744" type="submit">{{"FILT" | translate}}</button>
+                </div>
+            </div>
+        </form>
+ </div>

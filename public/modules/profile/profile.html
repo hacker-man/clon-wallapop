@@ -1,0 +1,289 @@
+<div style="margin-top: 80px">
+    <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyAbZTzPvRjcVH3ixhKgvTzeb2Re12j_kM8">
+        <div>
+            <div class="col-xs-12 col-lg-6 text-center">
+                <span ui-sref="editProfile({_id: userId})" ng-if="canIEdit()">
+                    <img ng-src="{{ userData.photoSocial }}" alt="" class="profile-picture" ng-mouseenter="mouseEnterProfilePicture()" ng-mouseleave="mouseLeaveProfilePicture()" style="cursor: pointer">
+                </span>
+                <span ng-if="!canIEdit()">
+                    <img ng-src="{{ userData.photoSocial }}" alt="" class="profile-picture" ng-mouseenter="mouseEnterProfilePicture()" ng-mouseleave="mouseLeaveProfilePicture()" ng-click="chat()" style="cursor: pointer">
+                </span>
+                <div>
+                    <button class="btn btn-outline outline-border btn-profile-picture-edit" ui-sref="editProfile({_id: userId})" ng-if="canIEdit()" id="editProfileBtn"><span class="fa fa-pencil"></span></button>
+                </div>
+                <div>
+                    <button class="btn btn-outline outline-border btn-profile-picture-edit" ng-if="!canIEdit()" ng-click="chat()"><span class="fa fa-comments"></span></button>
+                </div>
+                <div class="arrange-top profile-username">
+                    {{ userData.name }}
+                </div>
+         
+            </div>
+            <div class="col-xs-12 col-lg-6" style="padding-bottom: 40px">
+                <div class="col-xs-3 col-lg-6 text-center">
+                    <div class="btn btn-lg btn-outline outline-border profile-button profile-button-responsive" ng-class="{'active': userData.birthDate !== undefined && userData.birthDate !== null}" title="{{ tooltip.birthday }}" data-toggle="tooltip1" data-placement="top" tooltip>
+                        <span class="fa fa-birthday-cake"></span>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-lg-6 text-center">
+                    <div class="btn btn-lg btn-outline outline-border profile-button profile-button-responsive" ng-class="{'active': userData.latitude !== undefined && userData.longitude !== undefined || userData.livingArea !== undefined}" title="{{ tooltip.location }}" data-toggle="tooltip2" data-placement="top" tooltip>
+                        <span class="fa fa-map-marker"></span>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-lg-6 text-center">
+                    <div class="btn btn-lg btn-outline outline-border profile-button profile-button-responsive" ng-class="{'active': userData.gender !== undefined}" title="{{ tooltip.gender }}" data-toggle="tooltip3" data-placement="top" tooltip>
+                        <span class="fa fa-venus-mars"></span>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-lg-6 text-center">
+                    <div class="btn btn-lg btn-outline outline-border profile-button profile-button-responsive" ng-class="{'active': userData.phone !== undefined && userData.phone !== null}" title="{{ tooltip.phone }}" data-toggle="tooltip4" data-placement="top" tooltip>
+                        <span class="fa fa-phone"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 profile-map" style="padding: 0; margin-bottom: 20px">
+                <ng-map zoom="{{zoom}}" center="{{cnt1}}, {{cnt2}}" draggable="true" disable-default-u-i="false" disable-double-click-zoom="true" keyboard-shortcuts="false" scrollwheel="false">
+                    <div ng-if="userData.latitude !== '' && userData.latitude !== undefined">
+                        <custom-marker position="{{userData.latitude}}, {{userData.longitude}}">
+                            <div>
+                                <img ng-src="../images/marker.png" width="35px" class="animated bounce" alt="">
+                            </div>
+                        </custom-marker>
+                    </div>
+                    <div ng-if="userData.livingArea !== '' && userData.livingArea !== undefined">
+                        <custom-marker position="{{userData.livingArea}}, {{userData.livingArea}}">
+                            <div>
+                                <img ng-src="../images/marker.png" width="35px" class="animated bounce" alt="">
+                            </div>
+                        </custom-marker>
+                    </div>
+                </ng-map>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-3 text-center profile-section-header btn btn-outline outline-left outline-right" id="toggleSale" data-toggle="collapse" data-target="#collapse1" ng-click="collapseSale()">
+                    <div>
+                        {{ saleData.length }}
+                    </div>
+                    <div>
+                        {{ "PROFILE.COLLAPSE.SALE" | translate }}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-center profile-section-header btn btn-outline outline-left outline-right" id="toggleSold" data-toggle="collapse" data-target="#collapse2" ng-click="collapseSold()">
+                    <div>
+                        {{ soldData.length }}
+                    </div>
+                    <div>
+                        {{ "PROFILE.COLLAPSE.SOLD" | translate }}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-center profile-section-header btn btn-outline outline-left outline-right" id="toggleReviews" data-toggle="collapse" data-target="#collapse3" ng-click="collapseReviews()">
+                    <div>
+                        {{ userData.reviews.length }}
+                    </div>
+                    <div>
+                        {{ "PROFILE.COLLAPSE.COM" | translate }}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-center profile-section-header btn btn-outline outline-left outline-right" id="toggleFavAds" data-toggle="collapse" data-target="#collapse4" ng-click="collapseFavAds()">
+                    <div>
+                        {{ favAdsData.length }}
+                    </div>
+                    <div>
+                        {{ "PROFILE.COLLAPSE.FAVS" | translate }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="min-height: 100px">
+            <div class="col-xs-12 collapse" id="collapse1">
+                <div class="panel panel-default panel-color">
+                    <div class="panel-body">
+                        <div ng-show="saleData.length === 0">
+                            {{ "PROFILE.NOSALE" | translate }}
+                        </div>
+                        <div ng-repeat="item in saleData" ng-show="saleData.length > 0">
+                            <div class="row ad-row" style="padding-top: 35px; padding-bottom: 35px">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                    <span class="ad-name">
+                                    {{item.title}}
+                                </span>
+                                    <span class="ad-price">
+                                    ({{item.price}}
+                                <span class="fa fa-eur" ng-show="item.badge === 'EUR'"></span>
+                                    <span class="fa fa-gbp" ng-show="item.badge === 'GBP'"></span>
+                                    <span class="fa fa-usd" ng-show="item.badge === 'USD'"></span>
+                                    <span class="fa fa-cny" ng-show="item.badge === 'CNY'"></span> )
+                                    </span>
+                                    <span class="pull-right">
+                                <button ng-if="canIEdit()" class="btn btn-outline outline-border" style="font-size: 20px" ng-click="gotoEditAd(item)"><span class="fa fa-pencil"></span></button>
+                                    <button ng-if="canIEdit()" class="btn btn-outline outline-border" style="font-size: 20px; border-color: purple" ng-really-click="deleteAd(item)" ng-really-message="{{ 'PROFILE.CONFIRMDELETE' | translate }}" id="deleteAdBtn_{{$index}}"><span class="fa fa-trash"></span></button>
+                                    </span>
+                                    <div>
+                                        <img ng-src="{{item.image}}" ui-sref="detailAd({_id:item._id})" class="ad-image" alt="" style="width: 100%; margin-top: 15px; margin-bottom: 10px" id="img_{{$index}}">
+                                        <div class="text-center">
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.EXCHANGEABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.exchanges === true}">
+                                                    <span class="fa fa-exchange"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.NEGOTIABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.negotiable === true}">
+                                                    <span class="fa fa-sort"></span>
+                                                    <span class="fa fa-usd"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.MAILABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.shipments === true}">
+                                                    <span class="fa fa-paper-plane"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 collapse" id="collapse2">
+                <div class="panel panel-default panel-color">
+                    <div class="panel-body">
+                        <div ng-show="soldData.length === 0">
+                            {{ "PROFILE.NOSOLD" | translate }}
+                        </div>
+                        <div ng-repeat="item in soldData" ng-show="soldData.length > 0">
+                            <div class="row ad-row" style="padding-top: 35px; padding-bottom: 35px">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                    <span class="ad-name">
+                                    {{item.title}}
+                                </span>
+                                    <span class="ad-price">
+                                    ({{item.price}}
+                                <span class="fa fa-eur" ng-show="item.badge === 'EUR'"></span>
+                                    <span class="fa fa-gbp" ng-show="item.badge === 'GBP'"></span>
+                                    <span class="fa fa-usd" ng-show="item.badge === 'USD'"></span>
+                                    <span class="fa fa-cny" ng-show="item.badge === 'CNY'"></span> )
+                                    </span>
+                                    <div>
+                                        <img ng-src="{{item.image}}" ui-sref="detailAd({_id:item._id})" class="ad-image" alt="" style="width: 100%; margin-top: 15px; margin-bottom: 10px">
+                                        <div class="text-center">
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.EXCHANGEABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.exchanges === true}">
+                                                    <span class="fa fa-exchange"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.NEGOTIABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.negotiable === true}">
+                                                    <span class="fa fa-sort"></span>
+                                                    <span class="fa fa-usd"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.MAILABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.shipments === true}">
+                                                    <span class="fa fa-paper-plane"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 collapse" id="collapse3">
+                <div class="panel panel-default panel-color">
+                    <div class="panel-body">
+                        <div ng-show="userData.reviews.length === 0">
+                            {{ "PROFILE.NOCOMMENTS" | translate }}
+                        </div>
+                        <h2 ng-show="userData.reviews.length > 0">{{ userData.reviews }}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 collapse" id="collapse4">
+                <div class="panel panel-default panel-color">
+                    <div class="panel-body">
+                        <div ng-show="favAdsData.length === 0">
+                            {{ "PROFILE.NOFAVS" | translate }}
+                        </div>
+                        <div ng-repeat="item in favAdsData" ng-show="favAdsData.length > 0">
+                            <div class="row ad-row" style="padding-top: 35px; padding-bottom: 35px">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                    <span class="ad-name">
+                                    {{item.title}}
+                                </span>
+                                    <span class="ad-price">
+                                    ({{item.price}}
+                                <span class="fa fa-eur" ng-show="item.badge === 'EUR'"></span>
+                                    <span class="fa fa-gbp" ng-show="item.badge === 'GBP'"></span>
+                                    <span class="fa fa-usd" ng-show="item.badge === 'USD'"></span>
+                                    <span class="fa fa-cny" ng-show="item.badge === 'CNY'"></span> )
+                                    </span>
+                                    <div>
+                                        <a href="">{{item.owner}}</a>
+                                    </div>
+                                    <div>
+                                        <img ng-src="{{item.image}}" ui-sref="detailAd({_id:item._id})" class="ad-image" alt="" style="width: 100%; margin-top: 15px; margin-bottom: 10px">
+                                        <div class="text-center">
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.EXCHANGEABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.exchanges === true}">
+                                                    <span class="fa fa-exchange"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.NEGOTIABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.negotiable === true}">
+                                                    <span class="fa fa-sort"></span>
+                                                    <span class="fa fa-usd"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="text-center">
+                                                    {{ "PROFILE.MAILABLE" | translate}}
+                                                </div>
+                                                <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': item.shipments === true}">
+                                                    <span class="fa fa-paper-plane"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-outline outline-border profile-camera" ng-if="canIEdit()" ng-click="gotoCreateAd()" id="createAdBtn"><span class="fa fa-camera"></span>
+                <div class="profile-camera-text">{{ "PROFILE.SELL" | translate}}</div>
+            </button>
+        </div>
+    </div>
+</div>

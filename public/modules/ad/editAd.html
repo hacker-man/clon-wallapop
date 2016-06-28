@@ -1,0 +1,169 @@
+<div class="col-xs-12 col-md-8 col-md-offset-2" ng-controller="editAdCtrl">
+    <div class="text-center">
+        <h1><div translate="EDITAD.MAINTITLE"></div></h1>
+        <div class="panel panel-default panel-color">
+            <div class="panel-body">
+                <form name="editAd" novalidate class="form-signin" ng-submit="editAdForm()">
+                    <div class="col-xs-12">
+                        <div class="fileUpload btn btn-outline outline-border">
+                            <span translate="CREATEAD.BROWSE"></span>
+                            <input type="file" class="upload" name="avatar" ngf-select ng-model="picFile" name="description" accept="image/*" style="height: 43px" ngf-model-invalid="errorFile" id="changeAdPictureBtn">
+                        </div>
+                        <br>
+                            <img ngf-src="picFile" alt="Avatar" class="thumb" style="height: 150px; box-shadow: black 1px 1px 10px;">
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': editAd.adTitle.$valid && editAd.adTitle.$dirty, 'has-error': editAd.adTitle.$invalid && editAd.adTitle.$dirty }">
+                            <div class="col-xs-10">
+                                <input type="text" name="adTitle" placeholder="{{ 'CREATEAD.TITLE' | translate }}" class="form-control" autofocus required ng-model="model.ad.title">
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': editAd.adTitle.$valid && editAd.adTitle.$dirty, 'glyphicon-remove red_class': editAd.adTitle.$invalid && editAd.adTitle.$dirty, 'glyphicon-pencil': editAd.adTitle.$pristine }"></span>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': editAd.adDetail.$valid && editAd.adDetail.$dirty, 'has-error': editAd.adDetail.$invalid && editAd.adDetail.$dirty }">
+                            <div class="col-xs-10">
+                                <input type="text" name="adDetail" placeholder="{{ 'CREATEAD.DETAIL' | translate }}" class="form-control" required ng-model="model.ad.detail">
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': editAd.adDetail.$valid && editAd.adDetail.$dirty, 'glyphicon-remove red_class': editAd.adDetail.$invalid && editAd.adDetail.$dirty, 'glyphicon-pencil': editAd.adDetail.$pristine }"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': editAd.adPrice.$valid && editAd.adPrice.$dirty, 'has-error': editAd.adPrice.$invalid && editAd.adPrice.$dirty }">
+                            <div class="col-xs-7">
+                                <input type="number" name="adPrice" placeholder="{{ 'CREATEAD.PRICE' | translate }}" class="form-control" required ng-model="model.ad.price" min="1">
+                            </div>
+                            <div class="col-xs-3" ng-class="{ 'has-success': editAd.adCurrency.$valid && editAd.adCurrency.$dirty, 'has-error': editAd.adCurrency.$invalid && editAd.adCurrency.$dirty }">
+                                <select name="adCurrency" class="form-control" ng-model="model.ad.badge">
+                                    <option>EUR</option>
+                                    <option>USD</option>
+                                    <option>GBP</option>
+                                    <option>CNY</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': editAd.adPrice.$valid && editAd.adPrice.$dirty, 'glyphicon-remove red_class': editAd.adPrice.$invalid && editAd.adPrice.$dirty, 'glyphicon-pencil': editAd.adPrice.$pristine }"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12">
+                            <div class="col-xs-10">
+                                <select name="adCategory" class="form-control" ng-model="model.ad.category" id="category">
+                                    <option translate="CREATEAD.CATEGORY.CAT1">CAT1</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT2">CAT2</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT3">CAT3</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT4">CAT4</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT5">CAT5</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT6">CAT6</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT7">CAT7</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT8">CAT8</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT9">CAT9</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT10">CAT10</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT11">CAT11</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT12">CAT12</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12">
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag1" placeholder="{{ 'CREATEAD.TAGS.TAG1' | translate }}" class="form-control" ng-model="model.ad.tags[0]">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag2" placeholder="{{ 'CREATEAD.TAGS.TAG2' | translate }}" class="form-control" ng-model="model.ad.tags[1]" ng-show="model.ad.tags[0] != undefined || model.ad.tags[1] != undefined">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag3" placeholder="{{ 'CREATEAD.TAGS.TAG3' | translate }}" class="form-control" ng-model="model.ad.tags[2]" ng-show="model.ad.tags[1] != undefined || model.ad.tags[2] != undefined">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag4" placeholder="{{ 'CREATEAD.TAGS.TAG4' | translate }}" class="form-control" ng-model="model.ad.tags[3]" ng-show="model.ad.tags[2] != undefined || model.ad.tags[3] != undefined">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag5" placeholder="{{ 'CREATEAD.TAGS.TAG5' | translate }}" class="form-control" ng-model="model.ad.tags[4]" ng-show="model.ad.tags[3] != undefined || model.ad.tags[4] != undefined">
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="model.ad.tags[0] != undefined && model.ad.tags[1] != undefined && model.ad.tags[2] != undefined && model.ad.tags[3] != undefined && model.ad.tags[4] != undefined" id="errMsg" class="text-center" style="font-size: 1.3em" translate="CREATEAD.TAGS.WRONG"></div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 col-sm-4">
+                                <div>
+                                    <label translate="{{ 'CREATEAD.EXCHANGE' | translate }}"></label>
+                                </div>
+                                <input type="checkbox" bs-switch name="adExchange" ng-model="model.ad.exchanges" switch-on-color="primary" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}">
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div>
+                                    <label translate="{{ 'CREATEAD.NEGOTIATION' | translate }}"></label>
+                                </div>
+                                <input type="checkbox" bs-switch name="adNegotiation" ng-model="model.ad.negotiable" switch-on-color="primary" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}">
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div>
+                                    <label translate="{{ 'CREATEAD.SEND' | translate }}"></label>
+                                </div>
+                                <input type="checkbox" bs-switch name="adSend" ng-model="model.ad.shipments" switch-on-color="primary" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}" id="shipmentsBtn">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 15px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': editAd.adPurchaser.$valid && editAd.adPurchaser.$dirty && model.ad.sold  && !errorMessage === '', 'has-error': (editAd.adPurchaser.$invalid && editAd.adPurchaser.$dirty && model.ad.sold) || errorMessage !== ''}">
+                            <div class="col-xs-4">
+                                <div class="text-center">
+                                    <div>
+                                        <label translate="{{ 'CREATEAD.SOLD' | translate }}"></label>
+                                    </div>
+                                    <input type="checkbox" bs-switch ng-model="model.ad.sold" switch-on-color="success" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}">
+                                </div>
+                            </div>
+                            <div class="col-xs-6" style="margin-top: 25px;">
+                                <input type="text" name="adPurchaser" placeholder="{{ 'CREATEAD.PURCHASER' | translate }}" class="form-control" ng-model="model.ad.purchaser" ng-disabled="!model.ad.sold">
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 25px;">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': editAd.adPurchaser.$valid && editAd.adPurchaser.$dirty && model.ad.sold, 'glyphicon-remove red_class': (editAd.adPurchaser.$invalid && editAd.adPurchaser.$dirty && model.ad.sold) || errorMessage !== '', 'glyphicon-pencil': editAd.adPurchaser.$pristine && model.ad.sold && !errorMessage !== '' }"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-lg btn-default btn-block" ng-disabled="editAd.$invalid || (model.ad.sold && model.ad.purchaser === '' && model.ad.purchaser === undefined) || picFile === null " type="submit" id="saveAdBtn">
+                                <div translate="EDITAD.SAVE"></div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div ng-show="errorMessage !== ''" class="font-red-bootstrap">
+                    {{ errorMessage | translate }}
+                </div>
+                <div ng-show="foundUsers.length > 0">
+                    <div ng-repeat="user in foundUsers" class="row ad-row">
+                        <div class="col-xs-3">
+                            <button class="btn btn-outline outline-border" ng-click="editAdForm(user._id)">
+                                <span class="fa fa-check"></span>
+                            </button>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="col-xs-12 col-sm-4">
+                                <img ng-src="{{user.photoSocial}}" alt="" height="50px">
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                {{user.name}}
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                rating: {{user.rating}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

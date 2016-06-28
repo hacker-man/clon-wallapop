@@ -1,0 +1,349 @@
+{
+    "HEADER": {
+        "CATEGORIES": "Categories",
+        "HOME": "Home",
+        "LOGIN": "Login",
+        "PROFILE": "Profile",
+        "CREATEAD": "Create Ad",
+        "SEARCH": "Search Product...",
+        "LANGUAGE": {
+            "ES": "Spanish (Español)",
+            "EN": "English (EN)"
+        },
+        "LOGOUT": "Logout"
+    },
+
+    "HOME": {
+        "SLOGAN": "The app to sell & discover nearby",
+        "JOIN": "Come In!"
+    },
+
+    "FOOTER": {
+        "TERMS": "Terms",
+        "PRIV": "Privacy"
+    },
+
+    "MAINLOG": {
+        "TITLE": "Sign up now",
+        "SUBTITLE": "It will take only a few seconds!"
+    },
+
+    "MAINLOGLAYOUT": {
+        "FACEBOOK": "Login with Facebook",
+        "GOOGLE": "Login with Google",
+        "CONTINUE": "Continue with email",
+        "JOIN": "Login",
+        "SIGNUP": "Sign up"
+    },
+
+    "MAINLOGREDIRECT": {
+        "TITLE": "To access we need to know you",
+        "SUBTITLE": "It will take only a few seconds!"
+    },
+
+    "CUSTOMLOGIN": {
+        "EMAIL": "Email",
+        "PASS": "Password",
+        "JOIN": "Login",
+        "FORGOTTEN": "Forgotten password?",
+        "SIGNUPQUESTION": "Wanna sign up?",
+        "WRONG": ">>> Incorrect user or password <<<"
+    },
+
+    "CUSTOMSIGNUP": {
+        "NAME": "Full name",
+        "EMAIL": "Email",
+        "PASS": "Password",
+        "SIGNUP": "Sign Up",
+        "PASSERROR": "Password must be at least 8 characters long",
+        "ALREADYQUESTION": "Already signed up?",
+        "WRONG": ">>> Email already registered <<<"
+    },
+
+    "LOGOUT": {
+        "QUESTION": "Are u sure?",
+        "YES": "Yes",
+        "NO": "No"
+    },
+
+    "TERMS": {
+        "TITLE": "Terms and Conditions of Use",
+
+        "INTRO": {
+            "P1": "",
+            "P2": "",
+            "P3": "By the next Terms, the user declares:",
+            "L1": "I have read, understood and accepted the terms and conditions to use the website.",
+            "L2": "I agree with the obligations here shown.",
+            "L3": "I am 18 years of age or older.",
+            "P4": ""
+        },
+
+        "S1": {
+            "TITLE": "1) Acceptance",
+            "P1": "Thanks for choosing Wallapop (“Wallapop”, “we”, “us”, “our”). These Terms and Conditions of Use (“Terms” or “Terms of Use”) apply to the Wallapop services, websites, servers, software applications, and content therefrom (together, the “Wallapop Service” or “Service”), and include theWallapop Privacy Policy(the “Privacy Policy”) which is incorporated herein by reference. You agree to comply with all applicable laws and with all applicable rules, including theWallapop Rules, which are incorporated herein by reference. Subject to your agreement and continuing compliance with these Terms of Use, and all applicable laws, rules, and policies, Wallapop grants you a personal, non-exclusive, non-transferable, non-sublicensable, revocable, limited privilege to access and use the Service. If, for any reason, you are unable to agree, or do not agree, with any part of these Terms, then you must refrain from accessing or using the Service. BY USING OR ACCESSING THE SERVICE, YOU AGREE TO THESE TERMS OF USE. IF YOU DO NOT AGREE, DO NOT USE THE SERVICE."
+        },
+
+        "S2": {
+            "TITLE": "2) Age and Ability to Bind",
+            "P1": "The Service is available only to persons that can form legally binding contracts under applicable law. Without limiting the foregoing, our Service is not intended for, and may not be used by, people under the age of 18. By using our Service, you represent that you are over the age of 18."
+        },
+
+        "S3": {
+            "TITLE": "3) Modifications",
+            "P1": "These Terms were last updated on April 21, 2015. Wallapop will always post the most current version of these Terms on its website or on the Service.Wallapop reserves the right, at any time and with no need for prior notice, to modify these Terms and / or the Privacy Policy."
+        },
+
+        "S4": {
+            "TITLE": "4) Personal Data",
+            "P1": "You agree to provide true, current, accurate, and complete information about yourself, as requested in the registration form and elsewhere in the Service, and you agree to keep such information updated if it changes.You are prohibited from providing the personal data of third parties, including their image or likeness, at any time during your use of the Service.You agree to defend and hold Wallapop harmless  for any claim, loss, punishment, fine, or penalty resulting from your breach of the duty described in this paragraph.Any information provided by you during the registration process, including, without limitation, personally - identifiable information, will be used by Wallapop in accordance with itsPrivacy Policy."
+        },
+
+        "S5": {
+            "TITLE": "5) Password",
+            "P1": "You agree to be responsible for keeping your password safe and to accept any liability for damages that may arise from any use thereof, including assignment, disclosure, and/or loss thereof. Any use or access of the Service with your password will be considered to have been performed by you, and you will be responsible for said access and use."
+        },
+
+        "S6": {
+            "TITLE": "6) Linked Sites",
+            "P1": "The Service may include technical linking devices, directories, or search tools that allow you to access third party web sites and pages (hereinafter referred to as “Linked Sites”). You agree that Wallapop is in no way responsible for the Linked Sites. If you access a Linked Site for any reason, you do so at your own risk. Your use of any Linked Site and any personally-identifiable information or other information that you provide to any third party through a Linked Site is subject to the terms and conditions and privacy policy of such Linked Site, and not subject to these Terms or to Wallapop’s Privacy Policy.",
+            "P2": "No third-party provider of data or software applications (including but not limited to Apple, Google, or any other third party) endorses or takes responsibility for the Service or for Wallapop."
+        },
+
+        "S7": {
+            "TITLE": "7) Intellectual Property and Content",
+            "P1": "All of the Service’s content, meaning, by way of example, the text, photographs, graphics, images, icons, technology, software, links and other audiovisual or sound content, as well as its graphic design and source code (collectively, the “Wallapop Content”) are the intellectual property of Wallapop or third parties. You agree that you do not obtain any rights to the Service or any Wallapop Content, except for the limited license to use the same in accordance with these Terms.",
+            "P2": "You might encounter various trademarks, trade names, distinctive marks, or trade dress in the Service. These are the property of Wallapop or third parties. Use of the Service does not give you any rights over them. Appearance of a trademark, product, brand, or name in the Service does not imply that Wallapop has a business relationship, ownership, or endorsement thereof.",
+            "P3": "You represent that you are the sole author of all of the material, products, photographs, pictures, images, drawings, sounds, files, code, software, text, data, information, messages, descriptions, and/or content (together, “User Content”) that you publish on the Service and you guarantee that use thereof on the Service does not infringe or misappropriate third-party rights. You hereby grant Wallapop, free of charge, a non-exclusive, perpetual, irrevocable, worldwide, fully paid-up, royalty-free, sub-licensable, transferable license (including the right to sub-license and assign to third parties) and right to use, broadcast, publicly communicate, perform, display, enter into computer memory, manufacture, copy, reproduce, fix, adapt, modify, create derivative works from, distribute, commercialize, sell, license, sub-license, assign, publish, process, and use or access, in any way, the User Content, as well as any and all modified or derivative works thereof in connection with the Service, including promotion or marketing of the service. You also hereby grant to Wallapop the right to authorize others to exercise any rights granted to Wallapop under these Terms of Use. You further hereby grant to Wallapop the unconditional, irrevocable right to use and exploit your name, likeness and any other information or material included in any User Content and in connection with any User Content, without any obligation to you. Except as prohibited by law, you waive any rights of attribution and/or any moral rights you may have in your User Content, regardless of whether your User Content is changed or altered in any manner. Wallapop does not claim any ownership rights in your User Content and nothing in these Terms of Use is intended to restrict any rights that you may have to use and exploit your User Content. Wallapop has no duty to monitor or enforce your intellectual property rights in or to your User Content.",
+            "P4": "The Service may include various communication features where you can provide, submit, communicate, and/or share to Wallapop and/or other users your User Content, including your observations and comments. Wallapop cannot guarantee that other users will not use the ideas and information that you provide. Therefore, if you have an idea or information that you would like to keep confidential and/or don’t want others to use, do not provide it on the Service. Wallapop has no duty to evaluate, use, or compensate you for any ideas or information you may choose to provide (regardless of whether such provision is made through the Service, by email, or by any medium of communication), and Wallapop shall be free to use such information on an unrestricted basis."
+        },
+
+        "S8": {
+            "TITLE": "8) No Right of Withdrawal",
+            "P1": "You waive the right of withdrawal pursuant to Articles 97.1.i), 103. i), et al.of the Legislative Royal Decree RDL 1 / 2007 of 16 November, approving the revised text of the General Law for the Protection of Consumers and Users and other complementary laws(the“ Withdrawal Law”).You acknowledge and agree that any publication of advertisements takes place immediately after your request(s), and so the Withdrawal Law shall in no event apply to you nor to Wallapop."
+        },
+
+        "S9": {
+            "TITLE": "9) DISCLAIMERS AND LIMITATIONS OF LIABILITY",
+            "P1": "YOU ACKNOWLEDGE AND AGREE THAT THE SERVICE AND ALL CONTENT IS PROVIDED“ AS IS, ”“AS AVAILABLE”, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF TITLE, NON - INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.NONE OF WALLAPOP, ITS AFFILIATES, SUBSIDIARIES, OR ITS OR THEIR OFFICERS, DIRECTORS, EMPLOYEES OR AGENTS(COLLECTIVELY, THE“ WALLAPOP PARTIES”) WARRANT THAT THE SERVICE OR ANY WALLAPOP CONTENT WILL BE TIMELY, SECURE, UNINTERRUPTED OR ERROR FREE, OR THAT DEFECTS WILL BE CORRECTED.NONE OF THE WALLAPOP PARTIES SHALL BE LIABLE FOR ANY DAMAGES TO YOU OR YOUR COMPUTER EQUIPMENT OR OTHER PROPERTY ON ACCOUNT OF YOUR ACCESS TO OR USE OF THE SERVICE OR ANY WALLAPOP CONTENT.YOUR USE OF THE SERVICE AND THE WALLAPOP CONTENT IS ENTIRELY AT YOUR OWN RISK.YOUR SOLE AND EXCLUSIVE REMEDY FOR DISSATISFACTION WITH THE SERVICE OR THE WALLAPOP CONTENT IS TO STOP USING THE SAME.",
+            "P2": "YOU ARE SOLELY RESPONSIBLE FOR YOUR INTERACTION WITH OTHER USERS OF THE SERVICE.WALLAPOP IS A MERE INTERMEDIARY BETWEEN THE SERVICE’ S USERS, SO IT ACCEPTS NO LIABILITY FOR THE USE THEY MAKE OF IT OR THE CONDITIONS OR SOURCE OF THE PRODUCTS OFFERED THROUGH THE SERVICE OR THE POSSIBILITY THAT THEY MAY BE INACCURATE, DEFECTIVE, OR FAKE.WALLAPOP DOES NOT REVIEW OR APPROVE ANYTHING THE USERS OFFER THROUGH THE SERVICE.NONE OF THE WALLAPOP PARTIES IS A PARTY TO, OR HAS ANY RESPONSIBILITY OR LIABILITY WITH RESPECT TO, ANY TRANSACTION, COMMUNICATION OR INTERACTION BETWEEN USERS OF THE SERVICE OR FOR ANY PRODUCTS THAT ARE THE SUBJECT OF ANY TRANSACTION MADE USING THE SERVICE.NONE OF THE WALLAPOP PARTIES ENDORSE ANY PRODUCT THAT IS THE SUBJECT OF ANY TRANSACTION MADE THROUGH THE SERVICE.NONE OF THE WALLAPOP PARTIES IS RESPONSIBLE FOR THE CONDUCT, WHETHER ONLINE OR OFFLINE, OF ANY USER OF THE SERVICE.WALLAPOP AND THE WALLAPOP PARTIES EXPRESSLY DISCLAIM ANY AND ALL LIABILITY IN CONNECTION WITH THE FOREGOING.",
+            "P3": "ANY COMPLAINT OR DISPUTE THAT MAY ARISE BETWEEN THE USERS OF THE SERVICE MUST BE RESOLVED BY THEM AND THEY SHALL HOLD THE WALLAPOP PARTIES ENTIRELY HARMLESS.",
+            "P4": "IN NO EVENT SHALL ANY WALLAPOP PARTY BE LIABLE FOR SPECIAL, INDIRECT, PUNITIVE, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, REVENUES, OR SAVINGS, EVEN IF SUCH WALLAPOP PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES IN ADVANCE.IN NO EVENT SHALL THE TOTAL CUMULATIVE LIABILITY OF THE WALLAPOP PARTIES EXCEED $100 OR THE TOTAL AMOUNT PAID BY YOU TO WALLAPOP IN THE PRECEDING 12 MONTHS.",
+            "P5": "BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR NEGLIGENCE, CONSEQUENTIAL, INCIDENTAL OR OTHER DAMAGES, IN SUCH JURISDICTIONS THE WALLAPOP’ S PARTIES’ LIABILITY IS LIMITED TO THE GREATEST EXTENT PERMITTED BY APPLICABLE LAW."
+        },
+
+        "S10": {
+            "TITLE": "10) Waiver and Modification",
+            "P1": "Wallapop’ s relaxation of or failure to enforce a provision of these Terms of Use is not a waiver of its right to do so later.Except as specifically set forth in these Terms of Use, no representations, statements, consents, waivers, or other acts or omissions by Wallapop shall be deemed a modification of these Terms of Use, or legally binding, unless documented in physical writing, hand signed by you and a duly appointed officer of Wallapop."
+        }
+    },
+
+    "PRIV": {
+        "TITLE": "Political Notice",
+        "S1": {
+            "TITLE": "Incorporation of Babelpop's personal data files",
+            "CONTENT": "About conformity with the provisions of Law 15/1999 , of December 13 , Protection of Personal Data ( hereinafter ' LOPD' ) , reported that all data personal the user provides one through this website , including your IP address , they will be incorporated and processed in the files owned by Babelpop enabling the delivery of user-requested services and keep commercially informed, including by electronic means, about the new products and services Babelpop and the companies of its business group Dedicadas Do the same sector of activity. If the user does not wish to receive such communications , you can notify us in any time by e-mail to support@babelpop.com ."
+        },
+        "S2": {
+            "TITLE": "Rights",
+            "CONTENT": "The User can exercise their rights of access, rectification , cancellation and opposition under the Data Protection Act, by written communication addressed to Babelpop , Valencia Street, number 333, C.P. 08009 , Barcelona; or by mail addressed to support@babelpop.com . In both cases the concerned User should attach a copy of your national identity card , passport or other valid document that identifies you."
+        },
+        "S3": {
+            "TITLE": "Security",
+            "CONTENT": "User personal data will be processed by Babelpop under the strictest confidentiality , applying security measures and organizational techniques that apply under applicable law.",
+            "P1": {
+                "TITLE": "Under age prohibition",
+                "CONTENT": "Any person under 18 should not provide personal data to Babelpop without the prior consent of their parents. Please , if you want to order, ask them to contact us before."
+            },
+            "P2": {
+                "TITLE": "Third-party data ",
+                "CONTENT": "Users are prohibited on the Website provide personal data, including the image of others. The User agrees to indemnify Babelpop to any possible claim , penalty, fine or sanction that may be obliged to endure as a result of a breach by the User of the duty described in this paragraph."
+            },
+            "P3": {
+                "TITLE": "Viewing data between users",
+                "CONTENT": "The User knows and accepts that comment on the Blog your personal data may be viewed by other users of the same ."
+            }
+        }
+    },
+    "CREATEAD": {
+        "MAINTITLE": "Create ad",
+        "BROWSE": "Choose File",
+        "TITLE": "Product title",
+        "DETAIL": "Details",
+        "PRICE": "Price",
+        "CATEGORY": {
+            "TITLE": "Choose category",
+            "CAT1": "Electronics & Computers",
+            "CAT2": "Cars & Motors",
+            "CAT3": "Sports & Leisure",
+            "CAT4": "Home & Garden",
+            "CAT5": "Games & Consoles",
+            "CAT6": "Books, Movies & Music",
+            "CAT7": "Fashion & Accessories",
+            "CAT8": "Baby & Child",
+            "CAT9": "Real Estate",
+            "CAT10": "Appliances",
+            "CAT11": "Services",
+            "CAT12": "Others"
+        },
+        "TAGS": {
+            "TAG1": "Tags (Optional)",
+            "TAG2": "Tags 2",
+            "TAG3": "Tags 3",
+            "TAG4": "Tags 4",
+            "TAG5": "Tags 5",
+            "WRONG": "You've reached tags limit."
+        },
+        "EXCHANGE": "Accepting exchanges",
+        "NEGOTIATION": "Negotiable price",
+        "SEND": "Shipping available",
+        "SOLD": "Sold",
+        "PURCHASER": "Purchaser",
+        "PURCHASERNOTFOUND": "The purchaser is not valid",
+        "PURCHASERNOTFOUND2": "Are you sure that is how you spell it?",
+        "CREATEBUTTON": "Done!",
+        "SUCCESS": "Success!"
+    },
+    "LOCATION": {
+        "EDIT": "Now you're able to edit your location",
+        "WRITE": "I'll write it",
+        "CLICK": "Click on the map",
+        "SUBMIT": "Accept"
+    },
+    "PROFILE": {
+        "COLLAPSE": {
+            "SALE": "For sale",
+            "SOLD": "Sold",
+            "COM": "Comments",
+            "FAVS": "Favorites"
+        },
+        "TOOLTIP": {
+            "BIRTHDAY": "Birthday: ",
+            "GENDER": "Sex: ",
+            "PHONE": "Phone number: ",
+            "LOCATION": "Location"
+        },
+        "SELL": "Create offer",
+        "NEGOTIABLE": "Negotiable",
+        "MAILABLE": "Mailable",
+        "EXCHANGEABLE": "Exchangeable",
+        "CONFIRMDELETE": "Are you sure?",
+        "NOSALE": "This user has no ads for sale",
+        "NOSOLD": "This user has no sold ads",
+        "NOCOMMENTS": "This user has no reviews",
+        "NOFAVS": "This user has no favourites"
+    },
+    "EDITPROFILE": {
+        "HEADER": "Edit your profile",
+        "CHANGEPROFILEPICTURE": "Change your profile picture",
+        "BROWSE": "Choose File",
+        "UPLOAD": "Upload",
+        "NAME": "Name",
+        "LASTNAME": "Last Name",
+        "BIRTHDAY": "Birthday",
+        "PHONE": "Phone Number",
+        "PHONEPLACEHOLDER": "Add a phone number",
+        "LOCATION": "Location",
+        "MALE": "Male",
+        "FEMALE": "Female",
+        "ACCEPT": "Accept",
+        "CANCEL": "Cancel",
+        "CHANGEPASS": "Change password",
+        "CHANGEEMAIL": "Change email",
+        "FAVCATS": "My favourite categories",
+        "SAVE": "Save",
+        "WRONGOLDPWD": "Your current password is incorrect",
+        "WRONGNEWPWD": "New password and its confirmation do not match",
+        "OLDPWD": "Current password",
+        "NEWPWD": "New password",
+        "CONFIRMPWD": "Confirm password",
+        "NEWEMAIL": "New email account"
+    },
+    "GENDER": {
+        "MALE": "male",
+        "FEMALE": "female"
+    },
+    "EDITAD": {
+        "MAINTITLE": "Edit ad",
+        "SAVE": "Save",
+        "ERRORMESSAGE1": "You cannot buy your own products",
+        "ERRORMESSAGE2": "The purchaser is not valid. Are you sure that is how you spell it?",
+        "ERRORMESSAGE3": "We found several users with such name. Please choose the purchaser:"
+    },
+
+    "FORM": {
+        "STARFIELD": "* required field"
+    },
+    "ERROR": {
+        "HEADING": "Error 404: Page not found",
+        "MESSAGE": "The page you were looking for does not exist",
+        "FOOTER1": "Go back, or head over to",
+        "FOOTER2": "to choose a new direction"
+    },
+    "ERROR500": {
+        "HEADING": "Error 500: Internal Server Error",
+        "MESSAGE": "Looks like we did something wrong :_(",
+        "FOOTER1": "We track this errors automatically,",
+        "FOOTER2": "but if the problem persists feel free to contact us."
+    },
+    "ERRORUNKNOWN": {
+        "HEADING": "Unknown error",
+        "MESSAGE": "Looks like something went wrong!",
+        "FOOTER1": "Our extraordinarily trained cats are working on the issue,",
+        "FOOTER2": "but if the problem persists feel free to contact us"
+    },
+    "SWITCH": {
+        "YES": "Yes",
+        "NO": "No"
+    },
+    "ADDETAIL": {
+        "DATE": "Creation date: ",
+        "EDIT": "Edit"
+    },
+    "CAT1": "Electronics & Computers",
+    "CAT2": "Cars & Motors",
+    "CAT3": "Sports & Leisure",
+    "CAT4": "Home & Garden",
+    "CAT5": "Games & Consoles",
+    "CAT6": "Books, Movies & Music",
+    "CAT7": "Fashion & Accessories",
+    "CAT8": "Baby & Child",
+    "CAT9": "Real Estate",
+    "CAT10": "Appliances",
+    "CAT11": "Services",
+    "CAT12": "Others",
+    "UPLOADBY": "upload by",
+    "SHARE": {
+        "SUBJECT": "Advertisment: ",
+        "BODY": "Description: ",
+        "PRICE": "Cost: ",
+        "LINK": "BabelPop link: ",
+        "TWITTER": "Have a look at this amazing ad: ",
+        "SHARE": "Share!"
+    },
+
+    "CHAT": {
+        "NOCHATS": "You have no chats",
+        "WHATTODO1": "In order to start a conversation",
+        "WHATTODO2": "go into a user profile"
+    },
+
+    "ADVSEARCH": "Advanced Search",
+    "CITY": "In my city (10 km)",
+    "ZONE": "In my area (5 km)",
+    "CLOSER":"very close (1 km)",
+    "CTOE": "Cheap to expensive",
+    "ETOC":"Expensive to cheap",
+    "PROX": "Proximity",
+    "LAST":"Last published",
+    "FILT": "Filter",
+    "NAME": "Name",
+    "WARNINGMIN":"The price must be greater or equal than 0",
+    "WARNINGMIN2":"The price must be greater than min price",
+    "WARNINGMIN3":"The min price is required",
+    "SORTBY": "Sort by",
+    "PROXIMITY":"Proximity",
+    "PRICETITLE": "Price",
+    "CATTITLE": "Category",
+    "BACK" : "Go back"
+}

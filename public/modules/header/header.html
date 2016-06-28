@@ -1,0 +1,71 @@
+<div class="container" ng-controller="headerCtrl">
+    <nav role="navigation" class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a ng-click="logoClick()" href="#/ads" class="navbar-brand logo-navbar" id="logoBtn">
+                <span class="logo-color-babel">Babel</span><span class="logo-color-pop">pop</span>
+            </a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <div class="col-lg-5 visible-lg text-center">
+                <div class="col-sm-12  col-md-offset-5 col-lg-offset-5" style="margin-top: 10px">
+                    <ul class="nav navbar-nav">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle categories-button" data-toggle="dropdown">{{ "HEADER.CATEGORIES" | translate}} <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li ng-repeat="category in categories">
+                                        <a href="#" ui-sref = "filterAds({cat: category})" translate="CREATEAD.CATEGORY.{{category}}"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <form ng-submit="filterByName()" name="buscador">
+                                 <div class="input-group col-xs-12 col">
+                                     <input type="text" class="form-control" id="buscador" ng-model="title" placeholder="{{ 'HEADER.SEARCH' | translate}}">
+                                      <div class="input-group-btn">
+                                          <button id="btnBusqueda" type="submit" class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                      </div>
+                                 </div>  
+                            </form>  
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-click="selected='profile'" ng-if="isAuthenticated()">
+                    <a ng-class="{'active': selected==='profile'}" href="#/yourProfile" ui-sref="detailUser({_id: userId})" style="padding-bottom: 0;">
+                    {{ userName }}
+                        <img id="profile-picture-navbar" ng-src="{{ profilePicture }}" alt="" class="profile-picture-header">
+                    </a>
+                </li>
+                <li ng-click="selected='createAd'" ng-if="isAuthenticated()">
+                    <a ng-class="{'active': selected==='createAd'}" href="#/createAd"><span class="fa fa-camera"></span></a>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle"><span class="caret"></span> <span class="fa fa-flag-o"></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li>
+                            <a ng-click="changeLanguage('es_ES')" translate="HEADER.LANGUAGE.ES"></a>
+                        </li>
+                        <li>
+                            <a ng-click="changeLanguage('en_US')" translate="HEADER.LANGUAGE.EN"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li ng-click="selected='logout'" ng-if="isAuthenticated()">
+                    <a id="logoutID" ng-class="{'active': selected==='logout'}" href="" ng-click="redirectLogout()" translate="HEADER.LOGOUT"></a>
+                </li>
+                <li ng-click="selected='login'" ng-if="!isAuthenticated()">
+                    <a ng-class="{'active': selected==='login'}" href="#/log" translate="HEADER.LOGIN"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

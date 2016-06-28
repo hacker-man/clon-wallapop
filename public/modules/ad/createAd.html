@@ -1,0 +1,134 @@
+<div class="col-xs-12 col-md-8 col-md-offset-2" ng-controller="createAdCtrl">
+    <div class="text-center">
+        <h1><div translate="CREATEAD.MAINTITLE"></div></h1>
+        <div class="panel panel-default panel-color">
+            <div class="panel-body">
+                <form name="createAd" novalidate class="form-signin" ng-submit="createAdForm()">
+                    <div class="col-xs-12">
+                        <div class="fileUpload btn btn-outline outline-border">
+                            <span>*{{ 'CREATEAD.BROWSE' | translate }}</span>
+                            <input type="file" class="upload" name="avatar" ngf-select ng-model="picFile" name="description" accept="image/*" style="height: 43px" ngf-model-invalid="errorFile" required>
+                        </div>
+                        <br>
+                        <img ngf-thumbnail="picFile" class="thumb" alt="" style="height: 150px; box-shadow: black 1px 1px 10px;">
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': createAd.adTitle.$valid && createAd.adTitle.$dirty, 'has-error': createAd.adTitle.$invalid && createAd.adTitle.$dirty }">
+                            <div class="col-xs-10">
+                                <input type="text" name="adTitle" placeholder="*{{ 'CREATEAD.TITLE' | translate }}" class="form-control" autofocus required ng-model="model.title">
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': createAd.adTitle.$valid && createAd.adTitle.$dirty, 'glyphicon-remove red_class': createAd.adTitle.$invalid && createAd.adTitle.$dirty, 'glyphicon-pencil': createAd.adTitle.$pristine }"></span>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': createAd.adDetail.$valid && createAd.adDetail.$dirty, 'has-error': createAd.adDetail.$invalid && createAd.adDetail.$dirty }">
+                            <div class="col-xs-10">
+                                <input type="text" name="adDetail" placeholder="*{{ 'CREATEAD.DETAIL' | translate }}" class="form-control" required ng-model="model.detail">
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': createAd.adDetail.$valid && createAd.adDetail.$dirty, 'glyphicon-remove red_class': createAd.adDetail.$invalid && createAd.adDetail.$dirty, 'glyphicon-pencil': createAd.adDetail.$pristine }"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12" ng-class="{ 'has-success': createAd.adPrice.$valid && createAd.adPrice.$dirty, 'has-error': createAd.adPrice.$invalid && createAd.adPrice.$dirty }">
+                            <div class="col-xs-7">
+                                <input type="number" name="adPrice" placeholder="*{{ 'CREATEAD.PRICE' | translate }}" class="form-control" required ng-model="model.price" min="1">
+                            </div>
+                            <div class="col-xs-3" ng-class="{ 'has-success': createAd.adCurrency.$valid && createAd.adCurrency.$dirty, 'has-error': createAd.adCurrency.$invalid && createAd.adCurrency.$dirty }">
+                                <select name="adCurrency" class="form-control" ng-model="model.currency" ng-init="model.currency='EUR'">
+                                    <option>EUR</option>
+                                    <option>USD</option>
+                                    <option>GBP</option>
+                                    <option>CNY</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': createAd.adPrice.$valid && createAd.adPrice.$dirty, 'glyphicon-remove red_class': createAd.adPrice.$invalid && createAd.adPrice.$dirty, 'glyphicon-pencil': createAd.adPrice.$pristine }"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12">
+                            <div class="col-xs-10">
+                                <select name="adCategory" class="form-control" ng-model="model.category" id="category" ng-init="model.category='TITLE'">
+                                    <option translate="CREATEAD.CATEGORY.TITLE" disable selected hidden>TITLE</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT1">CAT1</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT2">CAT2</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT3">CAT3</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT4">CAT4</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT5">CAT5</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT6">CAT6</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT7">CAT7</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT8">CAT8</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT9">CAT9</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT10">CAT10</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT11">CAT11</option>
+                                    <option translate="CREATEAD.CATEGORY.CAT12">CAT12</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-pencil': model.category === 'TITLE', 'glyphicon-ok green_class': model.category !== 'TITLE' }"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12">
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag1" placeholder="{{ 'CREATEAD.TAGS.TAG1' | translate }}" class="form-control" ng-model="model.tag1">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag2" placeholder="{{ 'CREATEAD.TAGS.TAG2' | translate }}" class="form-control" ng-model="model.tag2" ng-show="model.tag1 != undefined || model.tag2 != undefined">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag3" placeholder="{{ 'CREATEAD.TAGS.TAG3' | translate }}" class="form-control" ng-model="model.tag3" ng-show="model.tag2 != undefined || model.tag3 != undefined">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag4" placeholder="{{ 'CREATEAD.TAGS.TAG4' | translate }}" class="form-control" ng-model="model.tag4" ng-show="model.tag3 != undefined || model.tag4 != undefined">
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" name="adTag5" placeholder="{{ 'CREATEAD.TAGS.TAG5' | translate }}" class="form-control" ng-model="model.tag5" ng-show="model.tag4 != undefined || model.tag5 != undefined">
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="model.tag1 != undefined && model.tag2 != undefined && model.tag3 != undefined && model.tag4 != undefined && model.tag5 != undefined" id="errMsg" class="text-center" style="font-size: 1.3em" translate="CREATEAD.TAGS.WRONG"></div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 col-sm-4">
+                                <div>
+                                    <label translate="{{ 'CREATEAD.EXCHANGE' | translate }}"></label>
+                                </div>
+                                <input type="checkbox" bs-switch name="adExchange" ng-model="model.exchange" switch-on-color="primary" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}">
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div>
+                                    <label translate="{{ 'CREATEAD.NEGOTIATION' | translate }}"></label>
+                                </div>
+                                <input type="checkbox" bs-switch name="adNegotiation" ng-model="model.negotiable" switch-on-color="primary" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}">
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div>
+                                    <label translate="{{ 'CREATEAD.SEND' | translate }}"></label>
+                                </div>
+                                <input type="checkbox" bs-switch name="adSend" ng-model="model.send" switch-on-color="primary" switch-off-color="default" switch-on-text="{{ 'SWITCH.YES' | translate }}" switch-off-text="{{ 'SWITCH.NO' | translate }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <br>
+                            <button class="btn btn-lg btn-default btn-block" ng-disabled="createAd.$invalid || model.category === 'TITLE'" type="submit" id="createAdBtn">
+                                <div translate="CREATEAD.CREATEBUTTON"></div>
+                            </button>
+                            <div class="font-grey pull-left" translate="FORM.STARFIELD"></div>
+                        </div>
+                    </div>
+                    <div ng-show="model.successAd" class="text-center" style="font-size: 1.3em; color: green;" translate="CREATEAD.SUCCESS"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

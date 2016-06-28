@@ -1,0 +1,144 @@
+footer {
+    position: static;
+}
+
+.footer {
+    background-color: @footer-background-color;
+    box-shadow: 0 1px 1px 0 @footer-box-shadow-color;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold @font-size-xs sans-serif;
+    padding: 15px 50px;
+    margin-top: 40px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Footer links */
+
+.footer .footer-links {
+    color: @white-color;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer .footer-company-name {
+    color: @footer-company-name-color;
+    font-size: @footer-company-name-font-size;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+/* The company logo */
+
+.footer .logo-navbar{
+    font-weight: normal;
+}
+
+/* Footer left */
+
+.footer .footer-left {
+    vertical-align: bottom;
+}
+
+/* Footer Center */
+
+.footer .footer-center {
+    padding-top: 25px;
+}
+
+.footer .footer-center i {
+    color: @white-color;
+    font-size: @footer-icon-size;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.footer .footer-center div {
+    display: inline-block;
+    color: @white-color;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer .footer-center div span {
+    display: block;
+    font-weight: normal;
+    font-size: @font-size-xxs;
+    line-height: 2;
+}
+
+.footer .footer-center div a {
+    color: @footer-hyperlink-color;
+    text-decoration: none;
+}
+
+
+/* Footer Right */
+
+.footer .footer-right {
+    padding-left: 0px;
+    text-align: right;
+    padding-top: 25px;
+}
+
+.footer .footer-icons {
+    margin-top: 25px;
+}
+
+.footer .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: @footer-icon-background-color;
+    border-radius: 2px;
+    font-size: @footer-icon-social-network-size;
+    color: @white-color;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: @footer-responsive-size) {
+    .footer {
+        font: bold @footer-responsive-font-size sans-serif;
+    }
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+    	padding-top: 0;
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer .footer-center i {
+        margin-left: 0;
+    }
+}

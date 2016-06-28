@@ -1,0 +1,25 @@
+<div ng-controller="forgottenCtrl">
+    <div class="col-xs-12">
+        <div class="panel panel-default panel-color" style="margin-top: 80px">
+            <div class="panel-body">
+                <div ng-controller="forgottenCtrl">
+                    <form name="forgottenForm" class="form-horizontal" novalidate ng-submit="forgottenForm.$valid && forgottenForm.password.$modelValue.length > 8">
+                        <div class="form-group" ng-class="{ 'has-success': forgottenForm.email.$valid && forgottenForm.email.$dirty, 'has-error': forgottenForm.email.$invalid && forgottenForm.email.$dirty }">
+                            <div class="col-xs-10 col-sm-11">
+                                <input type="email" class="form-control" name="email" placeholder="Correo electrónico" ng-model="model.email" required autofocus>
+                            </div>
+                            <div class="col-xs-2 col-sm-1">
+                                <span class="glyphicon glyphicon-top-align text-black" ng-class="{'glyphicon-ok green_class': forgottenForm.email.$valid && forgottenForm.email.$dirty, 'glyphicon-remove red_class': forgottenForm.email.$invalid && forgottenForm.email.$dirty, 'glyphicon-pencil': forgottenForm.email.$pristine }"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                                <button type="submit" id="entrarBtn" class="btn btn-lg btn-default" ng-disabled="forgottenForm.$invalid || forgottenForm.password.$modelValue.length < 8" ng-click="recoverPassword()"><span class="fa fa-envelope"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

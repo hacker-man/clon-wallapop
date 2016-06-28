@@ -1,0 +1,59 @@
+.cover-container {
+    .cover-text {
+        z-index: 0;
+        position: relative;
+        top: 140px;
+        background: @banner-black-transparency;
+        &.wide {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+        &.narrow {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .cover-text-body {
+            font-family: @banner-body-font-family;
+            font-size: @banner-body-font-size;
+            .fa {
+                text-shadow: @black-color 4px 6px 10px;
+                font-size: @banner-icon-size;
+                .text{
+                    font-family: @titles-font-family;
+                    font-size: @banner-btn-text-size;
+                    &.success{
+                        color: @bootstrap-success;
+                    }
+                    &.danger{
+                        color: @bootstrap-danger;
+                    }
+                }
+            }
+        }
+    }
+    .bg-home {
+        background-image: @home-background-image;
+    }
+    .bg-logout {
+        background-image: @logout-background-image;
+    }
+    .video-cover {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        .cover-bg {
+            -webkit-filter: blur(5px);
+        }
+        .video-center {
+            margin: 0 auto;
+            display: block;
+        }
+        @media (max-width: @video-cover-responsive-size) {
+            left: -400px;
+            width: auto;
+            height: auto;
+        }
+    }
+}

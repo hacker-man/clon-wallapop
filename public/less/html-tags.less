@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: @titles-font-family;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: @body-font-family;
+    color: @black-color;
+    background-image: @body-background-image;
+    height: 100%;
+}
+
+// ul (listado) después de p (párrafo)
+p,
+p + ul {
+    text-shadow: 1px 1px 10px @whiteish-color;
+    line-height: 1.6em;
+    margin: 2rem 0;
+}
+

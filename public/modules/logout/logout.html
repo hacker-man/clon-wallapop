@@ -1,0 +1,27 @@
+<div ng-controller="logoutCtrl">
+
+    <div class="cover-container">
+        <div class="video-cover bg-logout">
+            <div class="cover-bg"></div>
+            <video autoplay loop class="video-center" poster="../images/background/Wave-Sitting.jpg">
+                <source src="../images/video-covers/Wave-Sitting.mp4" type="video/mp4" />
+                <source src="../images/video-covers/Wave-Sitting.webm" type="video/webm" /> Tu navegador no soporta la etiqueta video. Te recomendamos actualizar el navegador.
+            </video>
+        </div>
+        <div class="cover-text wide text-center">
+            <div class="cover-text-body">
+                <div class="font-white" translate="LOGOUT.QUESTION"></div>
+                <button id="exit" class="btn btn-lg btn-outline outline-right outline-danger fa fa-frown-o" ng-click="logout()">
+                    <div class="text danger" translate="LOGOUT.YES">
+                    </div>
+                </button>
+                <button class="btn btn-lg btn-outline outline-left outline-success fa fa-smile-o" ng-click="stay()">
+                    <div class="text success" translate="LOGOUT.NO">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

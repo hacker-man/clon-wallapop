@@ -1,0 +1,82 @@
+<div class="col-xs-12 productbox">
+    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-7">
+        <img ng-src="{{datos.image}}" class="adImage" alt="" id="adImage">
+        <span class="soldBanner" ng-show="{{datos.sold}}">{{ "CREATEAD.SOLD" | translate }}</span>
+        <div class="text-center" ng-if="iAmTheOwner()">
+            <span class="btn btn-outline outline-border adEdit" ng-click="gotoEditAd(datos)" id="editAdBtn"><span class="fa fa-pencil"></span> {{"ADDETAIL.EDIT" | translate}}</span>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-6 col-lg-5">
+        <div class="col-xs-8 col-md-9">
+            <div class="adTitle" id="adTitle">
+                {{datos.title}}
+            </div>
+            <div class="adOwner" id="adOwner">
+                <a href="" ui-sref="detailUser({_id: datos.ownerId})">{{datos.owner}}</a>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-3" style="margin-top: 5px; min-width: 85px;">
+            <div class="pull-right" id="adStats">
+                <div class="adStat">
+                    {{datos.likes}}
+                    <i class="fa fa-heart icono cor off" ng-show="!isFav()" ng-click="iLikeIt()"></i>
+                    <i class="fa fa-heart icono cor on" ng-show="isFav()" ng-click="iLikeIt()"></i></span>
+                </div>
+                <div class="adStat">
+                    <span id="visits">
+                        {{datos.visits}}
+                    </span>
+                    <span class="fa fa-eye"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="adDescription" id="adDescription">{{datos.detail}}</div>
+            <div class="font-grey" translate="{{datos.category}}"  id="adCategory"></div>
+            <div class="font-grey">{{datos.tags | tagSplit }}</div>
+            <div class="adPrice" id="adPrice">{{datos.price}}
+                <span class="fa fa-eur" ng-show="datos.badge === 'EUR'"></span>
+                <span class="fa fa-gbp" ng-show="datos.badge === 'GBP'"></span>
+                <span class="fa fa-usd" ng-show="datos.badge === 'USD'"></span>
+                <span class="fa fa-cny" ng-show="datos.badge === 'CNY'"></span>
+            </div>
+            <div class="adOptions col-xs-12">
+                <div class="text-center col-xs-4">
+                    <div class="text-center">
+                        {{ "PROFILE.EXCHANGEABLE" | translate}}
+                    </div>
+                    <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': datos.exchanges === true}" title="{{ tooltip.phone }}" data-toggle="tooltip4" data-placement="top" tooltip>
+                        <span class="fa fa-exchange"></span>
+                    </div>
+                </div>
+                <div class="text-center col-xs-4">
+                    <div class="text-center">
+                        {{ "PROFILE.NEGOTIABLE" | translate}}
+                    </div>
+                    <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': datos.negotiable === true}" title="{{ tooltip.phone }}" data-toggle="tooltip4" data-placement="top" tooltip>
+                        <span class="fa fa-sort"></span>
+                        <span class="fa fa-usd"></span>
+                    </div>
+                </div>
+                <div class="text-center col-xs-4">
+                    <div class="text-center">
+                        {{ "PROFILE.MAILABLE" | translate}}
+                    </div>
+                    <div class="btn btn-lg btn-outline outline-border profile-button" ng-class="{'active': datos.shipments === true}" title="{{ tooltip.phone }}" data-toggle="tooltip4" data-placement="top" tooltip>
+                        <span class="fa fa-paper-plane"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="font-grey pull-right" id="adDate">{{"ADDETAIL.DATE" | translate}}{{datos.creationDate | date : "dd.MM.y"}}</div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="btn-group pull-right">
+            <div class="text-center shareBox">{{"SHARE.SHARE" | translate}}</div>
+            <div class="btn btn-outline outline-border" ng-click="shareGoogle()"><span class="fa fa-google-plus"></span></div>
+            <div class="btn btn-outline outline-border" ng-click="shareFacebook()"><span class="fa fa-facebook"></span></div>
+            <div class="btn btn-outline outline-border" ng-click="shareTwitter()"><span class="fa fa-twitter"></span></div>
+            <div class="btn btn-outline outline-border" ng-click="shareEmail()"><span class="fa fa-envelope"></span></div>
+        </div>
+    </div>
+</div>

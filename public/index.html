@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BabelPop</title>
+    <link href="./favicon.png" rel="icon" type="image/png" />
+    <!-- <link href="./favicon.ico" rel="icon" type="image/x-icon" /> -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/animate.css/animate.css" />
+    <link rel="stylesheet" href="lib/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+    <link rel="stylesheet" href="lib/ng-img-crop/compile/minified/ng-img-crop.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- endinject -->
+</head>
+
+<body ng-app="babelpop" ng-controller="appCtrl" ng-cloak>
+    <!-- bower:js -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/satellizer/satellizer.js"></script>
+    <script src="lib/spin.js/spin.js"></script>
+    <script src="lib/angular-spinner/angular-spinner.js"></script>
+    <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload.js"></script>
+    <script src="lib/checklist-model/checklist-model.js"></script>
+    <script src="lib/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    <script src="lib/angular-bootstrap-switch/dist/angular-bootstrap-switch.js"></script>
+    <script src="lib/ngmap/build/scripts/ng-map.js"></script>
+    <script src="lib/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <script src="lib/angular-socket-io/socket.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+    <script src="lib/angular-scroll-glue/src/scrollglue.js"></script>
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/constants/apiPaths.js"></script>
+    <script src="/scripts/constants/locales.js"></script>
+    <script src="/scripts/constants/paths.js"></script>
+    <script src="/scripts/constants/states.js"></script>
+    <script src="/scripts/directives/ngReallyClick.js"></script>
+    <script src="/scripts/factories/chatSocket.js"></script>
+    <script src="/scripts/factories/httpRequestInterceptor.js"></script>
+    <script src="/scripts/filters/tagSplit.js"></script>
+    <script src="/scripts/filters/timeago.js"></script>
+    <script src="/scripts/services/APIClient.js"></script>
+    <script src="/scripts/services/checkAuth.js"></script>
+    <script src="/scripts/services/errorHandler.js"></script>
+    <script src="/scripts/services/userDataStorage.js"></script>
+    <script src="/modules/appCtrl.js"></script>
+    <script src="/modules/ad/createAdCtrl.js"></script>
+    <script src="/modules/ad/detailAdCtrl.js"></script>
+    <script src="/modules/ad/editAdCtrl.js"></script>
+    <script src="/modules/ads/adsCtrl.js"></script>
+    <script src="/modules/ads/filterAdsAdvCtrl.js"></script>
+    <script src="/modules/ads/filterAdsCtrl.js"></script>
+    <script src="/modules/ads/filterAdsNameCtrl.js"></script>
+    <script src="/modules/chat/chatCtrl.js"></script>
+    <script src="/modules/chat/chatWindowCtrl.js"></script>
+    <script src="/modules/header/headerCtrl.js"></script>
+    <script src="/modules/location/editLocationCtrl.js"></script>
+    <script src="/modules/login/customLoginCtrl.js"></script>
+    <script src="/modules/login/customLogLayoutCtrl.js"></script>
+    <script src="/modules/login/customSignupCtrl.js"></script>
+    <script src="/modules/login/forgottenCtrl.js"></script>
+    <script src="/modules/login/mainLogLayoutCtrl.js"></script>
+    <script src="/modules/logout/logoutCtrl.js"></script>
+    <script src="/modules/profile/editProfileCtrl.js"></script>
+    <script src="/modules/profile/profileCtrl.js"></script>
+    <!-- endinject -->
+    <!-- Content -->
+    <div style="{{loading}}; height: 100%">
+        <div ng-include="'modules/header/header.html'"></div>
+        <!-- Homepage without container -->
+        <div ng-if="noFooter()">
+            <div class="viewMargin" ui-view></div>
+        </div>
+        <!-- ng-else with container -->
+        <div ng-if="!noFooter()" style="height: 100%">
+            <div class="container" style="min-height: 79.5%">
+                <div class="viewMargin animated fadeIn" ui-view></div>
+            </div>
+            <div ng-include="'modules/footer/footer.html'"></div>
+            <span us-spinner spinner-key="spinner-1" spinner-theme="bigBlue"></span>
+        </div>
+        <div ng-if="isLogged()" ng-include="'modules/chat/chat.html'"></div>
+    </div>
+</body>
+
+</html>
